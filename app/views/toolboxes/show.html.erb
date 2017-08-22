@@ -1,0 +1,26 @@
+<h1>Show-Page:</h1>
+
+
+
+  <p>
+    <strong>Title:</strong><br>
+    <%= @toolbox.title %>
+  </p>
+<br>
+    <p>
+      <strong>Beschreibung:</strong><br>
+      <%= @toolbox.description %>
+    </p>
+<br>
+      <p><strong>Gruppe:</strong><br>
+        <%= @toolbox.gruppe %>
+      </p>
+<br>
+    <p><strong>Kategorie:</strong><br>
+      <%= @toolbox.kategorie %>
+    </p>
+<br>
+
+<%= link_to "Zurück", toolboxes_path %>
+<%= link_to "Editieren", edit_toolbox_path(@toolbox) %>
+

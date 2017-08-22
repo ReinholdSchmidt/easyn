@@ -1,0 +1,39 @@
+
+
+  <%= form_for :toolbox, url: toolboxes_path do |f| %>
+
+      <!--Fehlermeldung-->
+      <% if @toolbox.errors.any? %>
+          <div id="error_explanation">
+            <h2>
+              <%= pluralize(@toolbox.errors.count, "error") %> prohibited this article from being saved:
+                  </h2>
+            <ul>
+              <% @toolbox.errors.full_messages.each do|msg| %>
+              <li><%= msg %></li>
+                  <% end %>
+            </ul>
+            <% end %>
+          </div>
+
+
+      <!--Formular-->
+
+        <%= f.label :title %><br>
+    <%= f.text_field :title %><br>
+
+    <br><%= f.label :description %>
+    <br><%= f.text_area :description %> <br>
+
+    <%= f.label :gruppe %><br>
+    <%= f.text_field :gruppe %><br>
+    <br>
+    <br>
+
+
+    <br><%= f.label :kategorie %> <br>
+    <br><%= f.text_field :kategorie %> <br>
+
+<br><%= f.submit %>
+
+<% end %>

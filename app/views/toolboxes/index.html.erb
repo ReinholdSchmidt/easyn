@@ -1,0 +1,32 @@
+--> <p id= "notice"><%= notice %></p><--
+
+<h1> Index-Page:</h1>
+
+<%= link_to "Toolbox erstellen", new_toolbox_path %>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Beschreibung</th>
+    <th>Gruppe</th>
+    <th>Kategorie</th>
+  </tr>
+
+
+  <% @toolboxes.each do |toolbox| %>
+        <tr>
+          <td><%= toolbox.title %></td>
+          <td><%= toolbox.description %></td>
+          <td><%= toolbox.gruppe %></td>
+          <td><%= toolbox.kategorie %></td>
+          <td><%= link_to 'Show', toolbox_path(toolbox) %></td>
+          <td><%= link_to 'Edit', edit_toolbox_path(toolbox) %></td>
+          <td><%= link_to 'Delete', toolbox_path(toolbox), method: :delete,
+                          data: {confirm: 'Sind Sie sicher?'} %></td>
+        </tr>
+
+  <% end %>
+</table>
+
+
+                
