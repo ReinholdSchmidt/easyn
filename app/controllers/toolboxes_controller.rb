@@ -2,6 +2,7 @@ class ToolboxesController < ApplicationController
 
   before_action :set_toolbox, only: [:show, :edit, :update, :destroy]
   def new
+    @toolbox = Toolbox.new
 
   end
 

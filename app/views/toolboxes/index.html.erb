@@ -1,4 +1,4 @@
---> <p id= "notice"><%= notice %></p><--
+ <p id= "notice"><%= notice %></p>
 
 <h1> Index-Page:</h1>
 
@@ -10,6 +10,9 @@
     <th>Beschreibung</th>
     <th>Gruppe</th>
     <th>Kategorie</th>
+
+    <th>Bisherige Choices,rating</th>
+
   </tr>
 
 
@@ -23,6 +26,12 @@
           <td><%= link_to 'Edit', edit_toolbox_path(toolbox) %></td>
           <td><%= link_to 'Delete', toolbox_path(toolbox), method: :delete,
                           data: {confirm: 'Sind Sie sicher?'} %></td>
+          <%toolbox.choices.each do |choice|%>
+
+          <td><tr><%=choice.rating%>   </tr></td>
+          <%end%>
+
+
         </tr>
 
   <% end %>
