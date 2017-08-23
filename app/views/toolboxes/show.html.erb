@@ -21,6 +21,65 @@
     </p>
 <br>
 
+
+<h2>Bisherig angelegte Choices:</h2>
+<% @toolbox.choices.each do |choice| %>
+  <p>
+    <strong>Choice:</strong>
+    <%=choice.title %>
+  </p>
+
+    <p>
+      <strong>Rating:</strong>
+      <%=choice.rating %>
+    </p>
+    <p><%= link_to 'Choice löschen', [choice.toolbox, choice],
+                   method: :delete,
+                   data: {confirm: 'Möchtest du diesen choice wirklcih löschen?'} %></p>
+
+
+
+
+<% end %>
+
+
+<h2>Choice für diese Toolbox anlegen:</h2>
+<%= form_for ([@toolbox, @toolbox.choices.build]) do |f| %>
+
+    <p>
+      <%= f.label :title %><br>
+      <%= f.text_field :title %>
+    </p>
+
+    <p>
+      <%= f.label :description %><br>
+      <%= f.text_area :description %>
+    </p>
+
+    <p>
+      <%= f.label :example %><br>
+      <%= f.text_area :example %>
+    </p>
+
+    <p>
+      <%= f.label :rating %><br>
+      <%= f.text_field :rating %>
+    </p>
+
+
+    <p><%= f.submit %></p>
+
+
+
+<% end %>
+
+
+
+
 <%= link_to "Zurück", toolboxes_path %>
 <%= link_to "Editieren", edit_toolbox_path(@toolbox) %>
+
+
+
+
 

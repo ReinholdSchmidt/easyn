@@ -5,6 +5,7 @@
       <!--Fehlermeldung-->
       <% if @toolbox.errors.any? %>
           <div id="error_explanation">
+            <h2>Fehlermeldung:</h2>
             <h2>
               <%= pluralize(@toolbox.errors.count, "error") %> prohibited this article from being saved:
                   </h2>

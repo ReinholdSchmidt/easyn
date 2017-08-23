@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   root 'toolboxes#index'
 
-  resources :toolboxes
+  resources :toolboxes do
+    resources :choices
+  end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
