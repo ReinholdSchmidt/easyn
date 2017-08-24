@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170822183421) do
+ActiveRecord::Schema.define(version: 20170824111919) do
 
   create_table "choices", force: :cascade do |t|
     t.string   "title"
@@ -21,6 +21,19 @@ ActiveRecord::Schema.define(version: 20170822183421) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.index ["toolbox_id"], name: "index_choices_on_toolbox_id"
+  end
+
+  create_table "prozesses", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.boolean  "istprozess"
+    t.boolean  "abletoviernull"
+    t.integer  "statusprozess"
+    t.boolean  "bestsolution"
+    t.integer  "istproz_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.index ["istproz_id"], name: "index_prozesses_on_istproz_id"
   end
 
   create_table "toolboxes", force: :cascade do |t|

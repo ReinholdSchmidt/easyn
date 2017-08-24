@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Prozesses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Istprozess</th>
+      <th>Abletoviernull</th>
+      <th>Statusprozess</th>
+      <th>Bestsolution</th>
+      <th>Istproz</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @prozesses.each do |prozess| %>
+      <tr>
+        <td><%= prozess.title %></td>
+        <td><%= prozess.description %></td>
+        <td><%= prozess.istprozess %></td>
+        <td><%= prozess.abletoviernull %></td>
+        <td><%= prozess.statusprozess %></td>
+        <td><%= prozess.bestsolution %></td>
+        <td><%= prozess.istproz %></td>
+        <td><%= link_to 'Show', prozess %></td>
+        <td><%= link_to 'Edit', edit_prozess_path(prozess) %></td>
+        <td><%= link_to 'Destroy', prozess, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Prozess', new_prozess_path %>

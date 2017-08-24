@@ -1,0 +1,52 @@
+<%= form_for(prozess) do |f| %>
+  <% if prozess.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(prozess.errors.count, "error") %> prohibited this prozess from being saved:</h2>
+
+      <ul>
+      <% prozess.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :istprozess %>
+    <%= f.check_box :istprozess %>
+  </div>
+
+  <div class="field">
+    <%= f.label :abletoviernull %>
+    <%= f.check_box :abletoviernull %>
+  </div>
+
+  <div class="field">
+    <%= f.label :statusprozess %>
+    <%= f.number_field :statusprozess %>
+  </div>
+
+  <div class="field">
+    <%= f.label :bestsolution %>
+    <%= f.check_box :bestsolution %>
+  </div>
+
+  <div class="field">
+    <%= f.label :istproz_id %>
+    <%= f.text_field :istproz_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

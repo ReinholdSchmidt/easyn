@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @prozess.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @prozess.description %>
+</p>
+
+<p>
+  <strong>Istprozess:</strong>
+  <%= @prozess.istprozess %>
+</p>
+
+<p>
+  <strong>Abletoviernull:</strong>
+  <%= @prozess.abletoviernull %>
+</p>
+
+<p>
+  <strong>Statusprozess:</strong>
+  <%= @prozess.statusprozess %>
+</p>
+
+<p>
+  <strong>Bestsolution:</strong>
+  <%= @prozess.bestsolution %>
+</p>
+
+<p>
+  <strong>Istproz:</strong>
+  <%= @prozess.istproz %>
+</p>
+
+<%= link_to 'Edit', edit_prozess_path(@prozess) %> |
+<%= link_to 'Back', prozesses_path %>
