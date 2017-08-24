@@ -17,6 +17,8 @@ ActiveRecord::Schema.define(version: 20170824111919) do
     t.text     "description"
     t.text     "example"
     t.integer  "rating"
+    t.string   "thumbnail"
+    t.string   "image"
     t.integer  "toolbox_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false

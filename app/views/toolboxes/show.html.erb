@@ -46,6 +46,14 @@
 <h2>Choice für diese Toolbox anlegen:</h2>
 <%= form_for ([@toolbox, @toolbox.choices.build]) do |f| %>
 
+
+
+    <p>
+      <%= f.label :title %><br>
+      <%= f.text_field :title %>
+    </p>
+
+
     <p>
       <%= f.label :title %><br>
       <%= f.text_field :title %>
@@ -65,6 +73,11 @@
       <%= f.label :rating %><br>
       <%= f.text_field :rating %>
     </p>
+
+
+
+
+
 
 
     <p><%= f.submit %></p>

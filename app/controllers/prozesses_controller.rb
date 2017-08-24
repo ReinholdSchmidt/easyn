@@ -4,8 +4,9 @@ class ProzessesController < ApplicationController
   # GET /prozesses
   # GET /prozesses.json
   def index
-    @prozesses = Prozess.all
-  end
+      @prozesses = Prozess.all
+     end
+
 
   # GET /prozesses/1
   # GET /prozesses/1.json

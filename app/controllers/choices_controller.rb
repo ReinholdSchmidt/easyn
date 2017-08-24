@@ -19,7 +19,7 @@ class ChoicesController < ApplicationController
 private
 
   def choice_params
-    params.require(:choice).permit(:title, :description, :example, :rating)
+    params.require(:choice).permit(:title, :description, :example, :rating, :image, :thumbnail)
   end
 
 

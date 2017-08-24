@@ -17,7 +17,11 @@
   </thead>
 
   <tbody>
+
     <% @prozesses.each do |prozess| %>
+  <!-- Wenn es ein Ist Prozess ist, wird dieser angezeigt, sonst nicht. Immer wenn Istproz /= null -->
+    <% if !prozess.istproz.present? then %>
+
       <tr>
         <td><%= prozess.title %></td>
         <td><%= prozess.description %></td>
@@ -31,6 +35,8 @@
         <td><%= link_to 'Destroy', prozess, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
+      <% end %>
+
   </tbody>
 </table>
 
