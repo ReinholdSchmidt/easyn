@@ -4,9 +4,8 @@ class ProzessesController < ApplicationController
   # GET /prozesses
   # GET /prozesses.json
   def index
-      @prozesses = Prozess.all
-     end
-
+    @prozesses = Prozess.all
+  end
 
   # GET /prozesses/1
   # GET /prozesses/1.json
@@ -70,6 +69,6 @@ class ProzessesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def prozess_params
-      params.require(:prozess).permit(:title, :description, :istprozess, :abletoviernull, :statusprozess, :bestsolution, :istproz_id)
+      params.require(:prozess).permit(:title, :description, :istprozess, :abletoviernull, :bestsolution, :istproz_id)
     end
 end

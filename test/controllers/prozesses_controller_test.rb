@@ -17,7 +17,7 @@ class ProzessesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create prozess" do
     assert_difference('Prozess.count') do
-      post prozesses_url, params: { prozess: { abletoviernull: @prozess.abletoviernull, bestsolution: @prozess.bestsolution, description: @prozess.description, istproz_id: @prozess.istproz_id, istprozess: @prozess.istprozess, statusprozess: @prozess.statusprozess, title: @prozess.title } }
+      post prozesses_url, params: { prozess: { abletoviernull: @prozess.abletoviernull, bestsolution: @prozess.bestsolution, description: @prozess.description, istproz_id: @prozess.istproz_id, istprozess: @prozess.istprozess, title: @prozess.title } }
     end
 
     assert_redirected_to prozess_url(Prozess.last)
@@ -34,7 +34,7 @@ class ProzessesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update prozess" do
-    patch prozess_url(@prozess), params: { prozess: { abletoviernull: @prozess.abletoviernull, bestsolution: @prozess.bestsolution, description: @prozess.description, istproz_id: @prozess.istproz_id, istprozess: @prozess.istprozess, statusprozess: @prozess.statusprozess, title: @prozess.title } }
+    patch prozess_url(@prozess), params: { prozess: { abletoviernull: @prozess.abletoviernull, bestsolution: @prozess.bestsolution, description: @prozess.description, istproz_id: @prozess.istproz_id, istprozess: @prozess.istprozess, title: @prozess.title } }
     assert_redirected_to prozess_url(@prozess)
   end
 
