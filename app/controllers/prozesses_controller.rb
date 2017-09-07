@@ -69,6 +69,6 @@ class ProzessesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def prozess_params
-      params.require(:prozess).permit(:title, :description, :istprozess, :abletoviernull, :bestsolution, :istproz_id)
+      params.require(:prozess).permit(:title, :istprozess, :description, :abletoviernull, :bestsolution, :istproz_id, :department)
     end
 end

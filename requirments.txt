@@ -1,0 +1,62 @@
+Anforderungen:
+Wir möchten Prozesse erstellen, die unterschieden werden durch Ist- /Soll Prozesse. Zudem wird die beste Lösung ausgewählt
+
+Folgendes Format soll es haben
+
+prozesses = [
+        {}
+        {}
+    ]
+
+    params = {
+        prozess => {
+            :title =>               "Boden/Deckel ZHM04 - Fertigung",
+            :description =>         "Ablauf der Fertigung des Deckels für die ZHM 04 / Zahnradflussgeber. Was sind die Stärken? Ws sind die schwächen davon? Welche Schnittstellen werden mit einbezogen?",
+              :prozess_attributes => [
+                                       {:prozess_id => "", :prozess_type => "Ist-Prozess"},
+                                       {:prozess_id => "", :prozess_type => "Ist-Prozess"}
+              ]
+
+
+
+Jede eingabe ehört zu einer Eingabe des Prozesses
+Prozess.new(params[:prozess])
+
+def prozess_attributes = (array_of_prozess_hashes)
+
+
+
+  <legend>Neue Lösungsvariante erstellen</legend>
+
+    <%= form_for (prozess) do |sollprozess_form| %>
+
+      <%= sollprozess_form.fields_for [@prozess, @prozess.sollprozesses] do |sollprozess_builder| %>
+      <p>
+        <%= sollprozess_builder.label :title %>
+        <%= sollprozess_builder.text_field :title %>
+      </p>
+
+      <p>
+        <%= sollprozess_builder.label :description %>
+        <%= sollprozess_builder.text_field :description%>
+      </p>
+
+<p>
+        <%= sollprozess_builder.label :best_solution %>
+        <%= sollprozess_builder.check_box :best_solution %>
+</p>
+
+      </div>
+
+      <%= sollprozess_builder.hidden_field :prozess_type %>
+
+  <%= sollprozess_builder.submit %>
+
+
+
+    <% end %>
+      <% end %>
+
+
+
+--> bundle lock --add-platform ruby

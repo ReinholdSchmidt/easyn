@@ -5,6 +5,7 @@
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
       <auth-required>false</auth-required>
       <first-sync>true</first-sync>
+      <introspection-schemas>*:main</introspection-schemas>
     </data-source>
     <data-source name="development.sqlite3" uuid="2aa82707-3a27-4c7a-9669-fbcf272dddc0">
       <database-info product="SQLite" version="3.16.1" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" />

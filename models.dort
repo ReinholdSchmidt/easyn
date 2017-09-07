@@ -1,0 +1,9 @@
+digraph models_diagram {
+	graph[overlap=false, splines=true, bgcolor="none"]
+	"ApplicationRecord" []
+	"Choice" [shape=Mrecord, label="{Choice|id :INTEGER\ltitle :varchar\ldescription :text\lexample :text\lrating :integer\lthumbnail :varchar\limage :varchar\ltoolbox_id :integer\lcreated_at :datetime\lupdated_at :datetime\l}"]
+	"Prozess" [shape=Mrecord, label="{Prozess|id :INTEGER\ltitle :varchar\ldescription :text\labletoviernull :boolean\lbestsolution :boolean\listproz_id :integer\lcreated_at :datetime\lupdated_at :datetime\l}"]
+	"Toolbox" [shape=Mrecord, label="{Toolbox|id :INTEGER\ltitle :varchar\ldescription :text\lkategorie :varchar\lgruppe :varchar\lcreated_at :datetime\lupdated_at :datetime\l}"]
+	"Prozess" -> "Prozess" [label="sollprozesses", arrowtail=odot, arrowhead=crow, dir=both color="#77488B"]
+	"Toolbox" -> "Choice" [arrowtail=odot, arrowhead=crow, dir=both color="#30F159"]
+}
