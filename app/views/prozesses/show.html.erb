@@ -35,5 +35,38 @@
   <%= @prozess.istproz %>
 </p>
 
+
+    <% if @prozess.soll_prozesses.present? %>
+   <h2>Bisher angelegte Lösungen:</h2>
+<table>
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>Title</th>
+    <th>Department</th>
+    <th>Abletoviernull</th>
+  </tr>
+  </thead>
+
+<tbody>
+  <% @prozess.soll_prozesses.each do |sollproz| %>
+
+  <tr>
+    <td><%= sollproz.id %></td>
+    <td><%= sollproz.title %></td>
+    <td><%= sollproz.department %><td>
+    <td><%= sollproz.abletoviernull%></td>
+    <td><%= link_to 'Show', prozess_path(sollproz) %></td>
+    <td><%= link_to 'Edit', edit_prozess_path(sollproz) %></td>
+    <td><%= link_to 'Delete', prozess_path(sollproz), method: :delete,
+                    data: {confirm: 'Sind Sie sicher?'} %></td>
+  </tr>
+<% end %>
+
+    </tbody>
+
+</table>
+<% end %>
+
 <%= link_to 'Edit', edit_prozess_path(@prozess) %> |
 <%= link_to 'Back', prozesses_path %>

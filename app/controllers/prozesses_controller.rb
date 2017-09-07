@@ -4,12 +4,14 @@ class ProzessesController < ApplicationController
   # GET /prozesses
   # GET /prozesses.json
   def index
+  #  @soll_prozesses = Prozess.soll_prozesses.find_by(istproz: :istproz_id)
     @prozesses = Prozess.all
   end
 
   # GET /prozesses/1
   # GET /prozesses/1.json
   def show
+
   end
 
   # GET /prozesses/new
@@ -25,6 +27,7 @@ class ProzessesController < ApplicationController
   # POST /prozesses.json
   def create
     @prozess = Prozess.new(prozess_params)
+
 
     respond_to do |format|
       if @prozess.save

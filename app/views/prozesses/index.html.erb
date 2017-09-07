@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Id</th>
       <th>Title</th>
       <th>Description</th>
       <th>Istprozess</th>
@@ -21,6 +22,7 @@
   <% @prozesses.each do |prozess| %>
       <% if prozess.istproz.nil? %>
       <tr>
+        <td><%= prozess.id%></td>
         <td><%= prozess.title %></td>
         <td><%= prozess.description %></td>
         <td><%= prozess.istprozess %></td>
